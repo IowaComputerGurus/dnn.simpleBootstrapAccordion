@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ICG.Modules.SimpleBootstrapAccordion</name>
+    </assembly>
+    <members>
+        <member name="T:ICG.Modules.SimpleBootstrapAccordion.Components.Models.PanelContent">
+            <summary>
+                Represents the content of a single tab
+            </summary>
+        </member>
+        <member name="P:ICG.Modules.SimpleBootstrapAccordion.Components.Models.PanelContent.PanelContentId">
+            <summary>
+                Gets or sets the panel content identifier.
+            </summary>
+            <value>The tab content identifier.</value>
+        </member>
+        <member name="P:ICG.Modules.SimpleBootstrapAccordion.Components.Models.PanelContent.ModuleId">
+            <summary>
+                Gets or sets the module identifier.
+            </summary>
+            <value>The module identifier.</value>
+        </member>
+        <member name="P:ICG.Modules.SimpleBootstrapAccordion.Components.Models.PanelContent.PanelTitle">
+            <summary>
+                Gets or sets the tab title.
+            </summary>
+            <value>The tab title.</value>
+        </member>
+        <member name="P:ICG.Modules.SimpleBootstrapAccordion.Components.Models.PanelContent.PanelContents">
+            <summary>
+                Gets or sets the tab contents.
+            </summary>
+            <value>The tab contents.</value>
+        </member>
+        <member name="P:ICG.Modules.SimpleBootstrapAccordion.Components.Models.PanelContent.SortOrder">
+            <summary>
+                Gets or sets the sort order.
+            </summary>
+            <value>The sort order.</value>
+        </member>
+        <member name="P:ICG.Modules.SimpleBootstrapAccordion.Components.Models.PanelContent.PanelBootstrapId">
+            <summary>
+                Identifier to be used for the div id within the bootstrap implementation
+            </summary>
+            <value>icg_bst_(ModuleId)_(ContentId)</value>
+        </member>
+        <member name="T:ICG.Modules.SimpleBootstrapAccordion.Components.Repositories.PanelContentRepository">
+            <summary>
+                Repository class for tab content interaction
+            </summary>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Repositories.PanelContentRepository.GetModulePanelContents(System.Int32)">
+            <summary>
+                Gets the module panel contents.
+            </summary>
+            <param name="moduleId">The module identifier.</param>
+            <returns>List&lt;TabContent&gt;.</returns>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Repositories.PanelContentRepository.GetPanelContentByPanelContentId(System.Int32,System.Int32)">
+            <summary>
+                Gets the panel content by panel content identifier.
+            </summary>
+            <param name="moduleId">The module identifier.</param>
+            <param name="panelContentId">The tab content identifier.</param>
+            <returns>TabContent.</returns>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Repositories.PanelContentRepository.DeletePanelContent(System.Int32,System.Int32)">
+            <summary>
+            Deletes the content of the panel.
+            </summary>
+            <param name="moduleId">The module identifier.</param>
+            <param name="panelContentId">The tab content identifier.</param>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Repositories.PanelContentRepository.SavePanelContent(ICG.Modules.SimpleBootstrapAccordion.Components.Models.PanelContent)">
+            <summary>
+                Saves the content of the panel.
+            </summary>
+            <param name="toSave">To save.</param>
+        </member>
+        <member name="T:ICG.Modules.SimpleBootstrapAccordion.Components.Utility.CacheUtility">
+            <summary>
+                Wrapper for working with DNN Cache
+            </summary>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Utility.CacheUtility.CacheExists(System.String)">
+            <summary>
+                Does the item exist in the cache?
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Utility.CacheUtility.SetCache``1(``0,System.String)">
+            <summary>
+                Sets the cache.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="toSet">To set.</param>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Utility.CacheUtility.GetItemFromCache``1(System.String)">
+            <summary>
+                Gets the item from cache.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ICG.Modules.SimpleBootstrapAccordion.Components.Utility.TemplateUtility">
+            <summary>
+                Helper class for working with template files
+            </summary>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Utility.TemplateUtility.GetTemplate(System.String)">
+            <summary>
+                Gets the template.
+            </summary>
+            <param name="templateName">Name of the template.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Utility.TemplateUtility.GetTemplate(System.String,System.String)">
+            <summary>
+                Gets the template.
+            </summary>
+            <param name="templateName">Name of the template.</param>
+            <param name="templatePath">The template path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Components.Utility.TemplateUtility.UpdateTemplate(System.String,System.String)">
+            <summary>
+                Updates the template.
+            </summary>
+            <param name="templateName">Name of the template.</param>
+            <param name="templateContents">The template contents.</param>
+        </member>
+        <member name="T:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent">
+            <summary>
+                UI control for editing content within the tabs
+            </summary>
+        </member>
+        <member name="P:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.PanelContentId">
+            <summary>
+                Gets the tab content identifier.
+            </summary>
+            <value>The tab content identifier.</value>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.txtPanelContent">
+            <summary>
+                Text editor UI control for Panel content
+            </summary>
+            <remarks>
+                DO NOT REMOVE: Needed for Visual Studio editor integration
+            </remarks>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.Page_Load(System.Object,System.EventArgs)">
+            <summary>
+                Page_s the load.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.btnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+                BTNs the cancel_ click.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.btnDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+                BTNs the delete_ click.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.btnSave_Click(System.Object,System.EventArgs)">
+            <summary>
+                BTNs the save_ click.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.lblPanelTitle">
+            <summary>
+            lblPanelTitle control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.txtPanelTitle">
+            <summary>
+            txtPanelTitle control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.PanelTitleRequired">
+            <summary>
+            PanelTitleRequired control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.lblPanelContent">
+            <summary>
+            lblPanelContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.lblSortOrder">
+            <summary>
+            lblSortOrder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.txtSortOrder">
+            <summary>
+            txtSortOrder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.SortOrderFormat">
+            <summary>
+            SortOrderFormat control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.btnSave">
+            <summary>
+            btnSave control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.liDelete">
+            <summary>
+            liDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.btnDelete">
+            <summary>
+            btnDelete control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.Modals.EditContent.btnCancel">
+            <summary>
+            btnCancel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ICG.Modules.SimpleBootstrapAccordion.View.litContent">
+            <summary>
+            litContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+    </members>
+</doc>

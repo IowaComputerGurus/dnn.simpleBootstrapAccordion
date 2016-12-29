@@ -1,0 +1,3 @@
+﻿<h3>Version 01.00.00</h3>
+
+<p>Initial public release with support for basic accordion panel display.  Current module structure requires the first item to be opened, and the rest of the items to be collapsed by default.  Default behavior will result in true accordion operations, including only 1 panel being visible at a time.</p>

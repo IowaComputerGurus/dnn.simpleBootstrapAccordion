@@ -1,0 +1,10 @@
+DROP  PROCEDURE {databaseOwner}[{objectQualifier}ICG_BSA_PanelContentSave]
+GO
+DROP PROCEDURE {databseOwner}[{objectQualifier}ICG_BSA_PanelContentDelete]
+GO
+DROP PROCEDURE {databseOwner}[{objectQualifier}ICG_BSA_PanelContentSelectByModuleIdAndContentId]
+GO
+DROP PROCEDURE {databseOwner}[{objectQualifier}ICG_BSA_PanelContentSelectByModuleId]
+GO
+DROP TABLE {databaseOwner}[{objectQualifier}ICG_BSA_PanelContent] 
+GO

@@ -1,0 +1,76 @@
+CREATE TABLE {databaseOwner}[{objectQualifier}ICG_BSA_PanelContent] 
+(
+	PanelContentId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	ModuleId INT,
+	PanelTitle NVARCHAR(MAX),
+	PanelContents NVARCHAR(MAX),
+	SortOrder INT
+)
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}ICG_BSA_PanelContentSelectByModuleId]
+	@ModuleId INT
+AS
+SELECT
+	PanelContentId,
+	ModuleId,
+	PanelTitle,
+	PanelContents,
+	SortOrder
+FROM {databaseOwner}[{objectQualifier}ICG_BSA_PanelContent] 
+WHERE ModuleId = @ModuleId
+ORDER BY SortOrder, PanelTitle
+GO
+
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}ICG_BSA_PanelContentSelectByModuleIdAndContentId]
+	@ModuleId INT,
+	@PanelContentId INT
+AS
+SELECT
+	PanelContentId,
+	ModuleId,
+	PanelTitle,
+	PanelContents,
+	SortOrder
+FROM {databaseOwner}[{objectQualifier}ICG_BSA_PanelContent] 
+WHERE ModuleId = @ModuleId
+	AND PanelContentId = @PanelContentId
+ORDER BY SortOrder, PanelTitle
+GO
+
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}ICG_BSA_PanelContentDelete]
+	@ModuleId INT,
+	@PanelContentId INT
+AS
+DELETE FROM {databaseOwner}[{objectQualifier}ICG_BSA_PanelContent] 
+WHERE ModuleId = @ModuleId
+	AND PanelContentId = @PanelContentId
+GO
+
+CREATE PROCEDURE {databaseOwner}[{objectQualifier}ICG_BSA_PanelContentSave]
+	@ModuleId INT,
+	@PanelContentId INT,
+	@PanelTitle NVARCHAR(MAX),
+	@PanelContents NVARCHAR(MAX),
+	@SortOrder INT
+AS
+IF(@PanelContentId > 0)
+BEGIN
+	UPDATE {databaseOwner}[{objectQualifier}ICG_BSA_PanelContent] 
+	SET PanelTitle = @PanelTitle,
+		PanelContents = @PanelContents,
+		SortOrder = @SortOrder
+	WHERE ModuleId = @ModuleId
+		AND PanelContentId = @PanelContentId
+END
+ELSE
+BEGIN
+	INSERT INTO {databaseOwner}[{objectQualifier}ICG_BSA_PanelContent] 
+		(ModuleId, PanelTitle, PanelContents, SortOrder)
+	VALUES
+		(@ModuleId, @PanelTitle, @PanelContents, @SortOrder)
+END
+GO
+
