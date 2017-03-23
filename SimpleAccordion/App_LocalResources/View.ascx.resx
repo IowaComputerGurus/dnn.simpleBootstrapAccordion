@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddTab.Text" xml:space="preserve">
+  <data name="AddPanel.Text" xml:space="preserve">
     <value>Add New Panel</value>
+  </data>
+  <data name="EditPanel.Text" xml:space="preserve">
+    <value>Edit Panel</value>
+  </data>
+  <data name="NoItems.Text" xml:space="preserve">
+    <value>You currently have no panels defined.  Use the "Add New Panel" action to add your first one.</value>
   </data>
 </root>

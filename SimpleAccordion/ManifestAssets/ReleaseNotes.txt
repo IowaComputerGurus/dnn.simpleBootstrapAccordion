@@ -1,3 +1,13 @@
-﻿<h3>Version 01.00.00</h3>
+﻿<h3>Version 01.01.00</h3>
+<p>Cleanup and standardization release for module structure.  The following listing of issues were addressed.</p>
+<ul>
+<li>OSI-3: Added warning message if no panels defined</li>
+<li>OSI-4: Corrected missing text for "Add New Panel" link</li>
+<li>OSI-5: Edit Operation should note "Edit Panel"</li>
+<li>OSI-6: Edit Panel action is now showing as a button</li>
+<li>OSI-7: Resolve issue preventing caching of rendered content</li>
+<li>OSI-8: Changed accordion panel to default to full clickable</li>
+</ul>
+<h3>Version 01.00.00</h3>
 
 <p>Initial public release with support for basic accordion panel display.  Current module structure requires the first item to be opened, and the rest of the items to be collapsed by default.  Default behavior will result in true accordion operations, including only 1 panel being visible at a time.</p>
