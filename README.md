@@ -5,10 +5,10 @@
 
 A simple module to allow management of Accordion content using bootstrap styles
 
-## Minimum DNN Version
+## Supported DNN Versions
 
-Current releases support DNN 7.0.0 and later
+Current release supports DNN & EVOQ Versions 7.0.0 and later, through current release.
 
 ## Other Requirements
 
-Your skin must include Bootstrap references
+Your skin must include Bootstrap references for proper styling and actions.
