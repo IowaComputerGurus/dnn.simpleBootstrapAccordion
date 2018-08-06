@@ -1,7 +1,6 @@
 # DNN Simple Bootstrap Accordion
 
-[![Build status](https://ci.appveyor.com/api/projects/status/acw7r300fr73kbxa?svg=true)](https://ci.appveyor.com/project/IowaComputerGurus/dnn-simplebootstrapaccordion)
-
+[![Build status](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_apis/build/status/DNN%20Simple%20Bootstrap%20Accordion)](https://iowacomputergurus.visualstudio.com/ICG%20Open%20Source/_build/latest?definitionId=0)
 
 A simple module to allow management of Accordion content using bootstrap styles
 
